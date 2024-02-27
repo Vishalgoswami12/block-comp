@@ -17,7 +17,6 @@ return(
                <ScrollView horizontal={true} contentContainerStyle={styles.scrollView}>
         {[1, 2, 3, 4, 5].map((item, index) => (
              <View key={index} style={[styles.cardContainer, index === 1 && styles.secondCardMargin]}>
-                {/* <IASMCQTest/> */}
                 <ExamCard/>
                  </View>
       ))}

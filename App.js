@@ -1,6 +1,7 @@
+import React,{useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,ScrollView } from 'react-native';
-import { Appbar, Chip, PaperProvider } from 'react-native-paper';
+import { Appbar, Checkbox, Chip, PaperProvider } from 'react-native-paper';
 import LeaderBoardCard from './src/swa-blocks/Card/LeaderBoardCard';
 import SwaLeaderCard from './src/swa-components/Card/SwaLeaderCard';
 import CardVideoTest from './src/swa-blocks/Card/CarrVideoTestInfo';
@@ -27,7 +28,12 @@ import HomePageBottomNavigation from './src/swa-Elements/HomePage/HomePageBottom
 import VideoCourseHeader from './src/swa-Elements/VideoCourses/VideoCouresHeader';
 import AppbarBackAction from './src/swa-blocks/Appbar/AppbarBackAction';
 import Shadow from "react-native-shadow";
+import CardTestToWin from './src/swa-blocks/Card/CardTestToWin';
+import AttemptToWin from './src/swa-Elements/VideoCourses/AttemptToWin';
+import VideoCourse from './src/swa-Elements/VideoCourses/VideoCourse';
+import VideoPageBottomNavigation from './src/swa-Elements/VideoCourses/VideoPageBottomNavigation';
 export default function App() {
+  const [checked, setChecked] = React.useState(false);
   return (
     <View style={styles.container}>
       {/* <Text>Open up App.js to start working on your app!</Text>
@@ -61,9 +67,11 @@ export default function App() {
         <Testimonials/>
         <HomePageBottomNavigation/> */}
         <VideoCourseHeader/>
-        
+        <AttemptToWin/>
+        <VideoCourse/>
+        <VideoPageBottomNavigation/>
         </ScrollView>
-       
+      
       </PaperProvider>
     </View>
   );
@@ -75,6 +83,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    top:32
+    top:32,
+    paddingBottom:20
   },
 });

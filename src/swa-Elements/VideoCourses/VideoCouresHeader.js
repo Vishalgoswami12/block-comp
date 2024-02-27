@@ -8,6 +8,7 @@ return(
     <View>
      
       <VideoCourseHead/>
+      
     </View>
 )
 }

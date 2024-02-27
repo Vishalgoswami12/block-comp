@@ -8,10 +8,11 @@ import SwaButton from "../../swa-components/Button/swaButton";
 
 function CardVideoCourse(){
 return(
-    <View>
+    <View style={styles.container}>
      <SwaCard
      width={328}
      height={296}
+     borderRadius={10}
      >
         <Text style={styles.text} variant="titleMedium">Foundation Batch for Police</Text>
         <View style={styles.subcont}>
@@ -60,24 +61,7 @@ return(
             </SwaChip>
         </View>
      </SwaCard>
-     <SwaCard
-      width={328}
-      height={160}
-     >
-          <Text style={styles.text2} variant="titleMedium">Foundation Batch for Police</Text>
-          <View style={styles.subcont1}>
-            <Text>by Manish S Pandey</Text>
-           <SwaButton
-           
-           mode="outlined"
-           backgroundColor="white"
-           borderRadius={10}
-           label="Go to Videos"
-           size="xsmall"
-           width={10}
-           />
-        </View>
-     </SwaCard>
+     
     </View>
   
 )
@@ -140,6 +124,10 @@ const styles = StyleSheet.create({
     subcont1:{
         flexDirection:"row",
         justifyContent:"space-between",
+    },
+    container:{
+        left:30,
+        top:20
     }
 })
 export default CardVideoCourse
