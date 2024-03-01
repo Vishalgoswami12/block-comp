@@ -19,7 +19,7 @@ const SwaAvatar = ({ onPress, source, icon, size, color, style, theme, onload, t
         onPress={onPress}
         icon={icon}
         size={size || 50}
-        color={color || theme.colors.primary}
+        color={color}
         style={style}
         testId={testId}
       />

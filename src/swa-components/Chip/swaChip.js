@@ -19,7 +19,8 @@ const SwaChip = ({
   textStyle,
   style,
   theme,
-  testID
+  testID,
+  onClose,
 }) => {
   return (
     <Chip
@@ -39,7 +40,9 @@ const SwaChip = ({
       textStyle={textStyle}
       style={style}
       theme={theme}
-      testID={testID}>
+      testID={testID}
+      onClose={onClose}
+      >
       {children}
     </Chip>
   );

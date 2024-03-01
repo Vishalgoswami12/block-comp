@@ -8,12 +8,14 @@ function CardQuestionMin(){
 return(
     <View>
         <SwaCard
-        width={390}
+        width={370}
+        height={48}
         backgroundColor="#E8E8E8"
+        borderRadius={10}
         />
         <View style={styles.question}>
         <SimpleLineIcons name="question" size={24} color="black" />
-        <Text style={styles.text}>120 Questions <Text style={styles.line}>   |</Text></Text>
+        <Text style={styles.text}>120 Questions <Text style={styles.line}> |</Text></Text>
         </View>
         <View style={styles.questioncard}>
         <MaterialCommunityIcons name="clock-outline" size={24} color="black" />
@@ -31,12 +33,14 @@ text:{
     bottom:43
 },
 question:{
-    bottom:57,
-    left:30
+    bottom:35,
+    left:20
 },
 line:{
     fontSize:35,
-    fontWeight:100
+    fontWeight:100,
+    left:40,
+    top:20
 },
 textQues:{
     left:32,
@@ -44,8 +48,8 @@ textQues:{
     bottom:25
 },
 questioncard:{
-    left:245,
-    bottom:130
+    left:220,
+    bottom:110
 }
 })
 

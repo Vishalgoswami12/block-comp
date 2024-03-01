@@ -32,6 +32,15 @@ import CardTestToWin from './src/swa-blocks/Card/CardTestToWin';
 import AttemptToWin from './src/swa-Elements/VideoCourses/AttemptToWin';
 import VideoCourse from './src/swa-Elements/VideoCourses/VideoCourse';
 import VideoPageBottomNavigation from './src/swa-Elements/VideoCourses/VideoPageBottomNavigation';
+import CoursePurchased from './src/swa-Elements/VideoCourses/CoursePurchased';
+import VideoPlayerResources from './src/swa-Elements/VideoCourses/VideoPlayerResources';
+import CourseUnpurchased from './src/swa-Elements/VideoCourses/CourseUnpurchased';
+import Goal from './src/swa-Elements/Goal/Goal';
+import AllTest from './src/swa-Elements/MyTest/AllTests';
+import Attempted from './src/swa-Elements/MyTest/Attempted';
+import QuizBasicInfo from './src/swa-Elements/Quiz/QuizBasicInfo';
+import MCQScreen from './src/swa-Elements/Quiz/MCQScreen';
+import AppbarHeaderContent from './src/swa-blocks/Appbar/AppbarHeaderContent';
 export default function App() {
   const [checked, setChecked] = React.useState(false);
   return (
@@ -66,10 +75,22 @@ export default function App() {
         <ThisWeekSpecial/>
         <Testimonials/>
         <HomePageBottomNavigation/> */}
-        <VideoCourseHeader/>
+        {/* <VideoCourseHeader/>
         <AttemptToWin/>
         <VideoCourse/>
-        <VideoPageBottomNavigation/>
+        <VideoPageBottomNavigation/> */}
+        {/* <VideoCoursePurchased/> */}
+        {/* <VideoPlayerResources/> */}
+        {/* <CourseUnpurchased/> */}
+        {/* <Goal/> */}
+        {/* <AllTest/> */}
+        {/* <Attempted/> */}
+        {/* <QuizBasicInfo/> */}
+        {/* <CoursePurchased/> */}
+        {/* <MCQScreen/> */}
+        <AppbarBackAction/>
+        <AppbarHeaderContent/>
+        <HeadHomeScreen/>
         </ScrollView>
       
       </PaperProvider>
@@ -81,8 +102,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    // alignItems: 'center',
+    // justifyContent: 'center',
     top:32,
     paddingBottom:20
   },

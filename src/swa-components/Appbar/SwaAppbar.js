@@ -31,7 +31,7 @@ const SwaAppBar = ({
       style={[{ backgroundColor }, style]}
       mode={mode}
       testID={testID}
-      elevated={elevated}
+      elevation={elevated ? 4 : 0}
     >
       {backAction ? (
         <Appbar.BackAction
