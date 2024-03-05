@@ -3,7 +3,7 @@ import SwaCard from "../../swa-components/Card/swaCard";
 import SwaAvatar from "../../swa-components/Avatar/SwaAvatar";
 import SwaBadge from "../../swa-components/Badge/SwaBadge";
 import { View } from "react-native";
-function CarNotification() {
+function CardNotification() {
   return (
     <View>
       <View>
@@ -34,4 +34,4 @@ function CarNotification() {
   );
 }
 
-export default CarNotification;
+export default CardNotification;

@@ -1,7 +1,7 @@
 import React from "react";
-import SwaCard from "../../swa-components/Card/SwaCard";
+import SwaCard from "../../swa-components/Card/swaCard";
 import Text from "react-native-paper";
-import SwaChip from "../../swa-components/Chip/SwaChip";
+import SwaChip from "../../swa-components/Chip/swaChip";
 import { View } from "react-native";
 function CardContentLiveStream() {
   return (

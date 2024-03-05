@@ -11,13 +11,14 @@ const AppbarBackAction = () => {
         backAction={true}
         title="Header"
         dark={true}
-        backActionAccessibilityLabel="Go Back"
+        // backActionAccessibilityLabel="Go Back"
         backActionColor="black"
         style={styles.back}
         >
-        <Text variant="titleLarge" style={styles.text}>
+        {/* <Text variant="titleLarge" style={styles.text}>
           Header
-        </Text>
+        </Text> */}
+        
       </SwaAppBar>
     </View>
   );

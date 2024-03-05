@@ -11,9 +11,7 @@ function CardActionLiveStream() {
         <SwaCard
           title="Revision(JEE Mains Starter Course)"
           actions={
-            <Card.Actions>
               <SwaButton onPress={() => {}} label="Join Now" />
-            </Card.Actions>
           }
         />
       </View>

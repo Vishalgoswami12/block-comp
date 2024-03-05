@@ -12,7 +12,7 @@ return(
             <Text><Text style={styles.booktext}>MATHS/</Text>QUESTION 1</Text>
             <View style={styles.iconContainer}>
             <FontAwesome style={styles.icon} name="bookmark" size={24} color="#175CCC" />
-            <MaterialCommunityIcons  name="flag-outline" size={24} color="black" />
+            <MaterialCommunityIcons style={styles.flag}  name="flag-outline" size={24} color="black" />
             </View>
             </View>
             <Text style={styles.questext}>Lorem ipsum dolor sit amet consectetur adipiscing elit? </Text>
@@ -39,12 +39,13 @@ return(
         <View style={styles.btn}>
         <SwaButton
         mode="outlined"
-        backgroundColor="white"
+        borderRadius={10}
+        borderColor="#5E5E5E"
         size="medium"
-        label="Show Answer"
         labelColor="grey"
-        />
+        >Show Answer</SwaButton>
         </View>
+        <View style={styles.line2}></View>
       
     </View>
 )
@@ -56,6 +57,7 @@ const styles = StyleSheet.create({
     },
     iconContainer: {
         flexDirection: "row",
+        right:10
       },
       icon:{
         marginRight:28
@@ -126,6 +128,17 @@ const styles = StyleSheet.create({
     },
     btn:{
         top:140,
-    }
+    },
+    flag:{
+        right:10
+    },
+    line2: {
+        borderBottomWidth: 1,
+        borderBottomColor: 'grey',
+        marginVertical: 10,
+        width:350,
+        top:150,
+        left:10
+      },
 })
 export default TestBookmarks;

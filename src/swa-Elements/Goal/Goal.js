@@ -6,7 +6,9 @@ import GoalBlock from "../../swa-blocks/Goal/GoalBlock";
 function Goal(){
 return(
     <View style={styles.container}>
-      <GoalBlock/>
+      <GoalBlock
+    //   theme={{backgroundColor:"black"}}
+      />
     </View>
 )
 }

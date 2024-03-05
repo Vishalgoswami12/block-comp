@@ -8,16 +8,15 @@ import SwaRadioButton from "../../swa-components/RadioButton/swaRadioButton";
 import SwaListAccordian from "../../swa-components/List/swaListAccordian";
 import SwaButton from "../../swa-components/Button/swaButton";
 import BottomNavigationBar from "../../swa-blocks/BoottomNavigation/BottomNavigationBar";
-
-function GoalBlock(){
+function GoalBlock({theme}){
 return(
     <View>
         <View style={styles.card}>
         <SwaAppBar
         backAction={true}
-        backgroundColor="white"
         elevated={true}
         style={styles.appBar}
+        theme={theme}
         />
         </View>
         <Text style={styles.textgoal}>Fix Your Goal</Text>

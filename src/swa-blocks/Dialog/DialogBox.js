@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { View, StyleSheet, Button } from "react-native";
-import SwaDialog from "../../swa-components/Dialog/SwaDialog";
+import SwaDialog from "../../swa-components/Dialog/swaDialog";
 
 function DialogBox() {
   return (
     <View style={styles.container}>
       <View style={styles.dialog}>
         <SwaDialog
-          visible={dialogVisible}
+          visible={true}
           backgroundColor="white"
           title="Dialog Title"
           content="Enter text over here."

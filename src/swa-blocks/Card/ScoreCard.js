@@ -9,9 +9,10 @@ function ScoreCard(){
 return(
     <View>
     <SwaCard
-    width={340}
+    width={360}
     height={380}
     backgroundColor="#D9EDFF"
+    borderRadius={10}
     />
    
     {/* <ProgressBar

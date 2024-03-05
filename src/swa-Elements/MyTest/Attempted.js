@@ -13,6 +13,7 @@ return(
         backgroundColor="white"
         elevated={true}
         style={styles.appBar}
+        titleStyle={styles.title}
         />
        
         </View>
@@ -49,6 +50,10 @@ const styles = StyleSheet.create({
         // shadowRadius:7,
         elevation: 11,
         bottom:5
+    },
+    title:{
+      fontSize:16,
+      fontWeight:600
     },
     testtext:{
         bottom:49,

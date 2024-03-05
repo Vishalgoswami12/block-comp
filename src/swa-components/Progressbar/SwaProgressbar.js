@@ -1,5 +1,5 @@
 import { ProgressBar } from "react-native-paper";
-
+import themeObject from "../../Constants/Globaltyle"
 const SwaProgressbar = ({
   animatedValue,
   progress,
@@ -15,12 +15,11 @@ const SwaProgressbar = ({
     <ProgressBar
       animatedValue={animatedValue}
       progress={progress}
-      color={color}
+      color={themeObject?.theme?.PrimaryColor?.Primary800 || "#329FFF"}
       indeterminate={indeterminate}
       visible={visible}
       fillStyle={fillStyle}
       style={style}
-      theme={theme}
       testID={testID}
     />
   );

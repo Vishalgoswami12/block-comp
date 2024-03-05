@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,ScrollView } from 'react-native';
-import { Appbar, Checkbox, Chip, PaperProvider } from 'react-native-paper';
+import { StyleSheet, Text, View,ScrollView, SafeAreaView } from 'react-native';
+import { Appbar, Checkbox, Chip, PaperProvider, ProgressBar } from 'react-native-paper';
 import LeaderBoardCard from './src/swa-blocks/Card/LeaderBoardCard';
 import SwaLeaderCard from './src/swa-components/Card/SwaLeaderCard';
 import CardVideoTest from './src/swa-blocks/Card/CarrVideoTestInfo';
@@ -37,12 +37,32 @@ import VideoPlayerResources from './src/swa-Elements/VideoCourses/VideoPlayerRes
 import CourseUnpurchased from './src/swa-Elements/VideoCourses/CourseUnpurchased';
 import Goal from './src/swa-Elements/Goal/Goal';
 import AllTest from './src/swa-Elements/MyTest/AllTests';
-import Attempted from './src/swa-Elements/MyTest/Attempted';
-import QuizBasicInfo from './src/swa-Elements/Quiz/QuizBasicInfo';
-import MCQScreen from './src/swa-Elements/Quiz/MCQScreen';
+import QuizBasicInfo from './src/swa-Elements/MyTest/QuizBasicInfo';
+import MCQScreen from './src/swa-Elements/MyTest/MCQScreen';
 import AppbarHeaderContent from './src/swa-blocks/Appbar/AppbarHeaderContent';
+import HeadHomeScreen from "./src/swa-blocks/Appbar/HeadHomeScreen"
+import HeadLine from "./src/swa-blocks/Appbar/HeadLine"
+import HeadLiveStream from './src/swa-blocks/Appbar/HeadLiveStream';
+import CardActionLiveStream from './src/swa-blocks/Card/CardActionLiveStream';
+import  Attempted  from './src/index';
+import HeadLineNotification from './src/swa-blocks/Appbar/HeadLineNotification';
+import CardClass from './src/swa-blocks/Card/CardClass';
+import SwaSegmentedButton from './src/swa-components/SegmentedButton/swaSegmentedButton';
+import CardNotification from "./src/swa-blocks/Card/CardNotification"
+import CardTicket from './src/swa-blocks/Card/CardTicket';
+import DialogBox from './src/swa-blocks/Dialog/DialogBox';
+import CardContentProgress from './src/swa-blocks/Card/CardContentProgress';
+import GoalBlock from './src/swa-blocks/Goal/GoalBlock';
+import ReviewScreen from './src/swa-Elements/MyTest/ReviewScreen';
+import ReviewBookmarks from './src/swa-Elements/MyTest/ReviewBookmarks';
+import Examination from './src/swa-Elements/MyExam/Examination';
 export default function App() {
   const [checked, setChecked] = React.useState(false);
+  const buttons = [
+    { text: "Button 1", key: "button1" },
+    { text: "Button 2", key: "button2" },
+    { text: "Button 3", key: "button3" }
+  ];
   return (
     <View style={styles.container}>
       {/* <Text>Open up App.js to start working on your app!</Text>
@@ -88,10 +108,33 @@ export default function App() {
         {/* <QuizBasicInfo/> */}
         {/* <CoursePurchased/> */}
         {/* <MCQScreen/> */}
-        <AppbarBackAction/>
-        <AppbarHeaderContent/>
-        <HeadHomeScreen/>
+        {/* <AppbarBackAction/> */}
+        {/* <AppbarHeaderContent/> */}
+        {/* <HeadHomeScreen/> */}
+        {/* <HeadLine
+        title={"your"}
+        /> */}
+        {/* <HeadLineNotification/> */}
+        {/* <CardActionLiveStream/> */}
+        {/* <CardClass/> */}
+        {/* <CardNotification/> */}
+        {/* <CardTicket/> */}
+        {/* <DialogBox/> */}
+        {/* <CardContentProgress/> */}
+        {/* <ProgressBar
+        progress={0.5}
+        color='black'
+        /> */}
+        {/* <Goal/> */}
+        {/* <GoalBlock/> */}
+        {/* <ReviewScreen/> */}
+        {/* <ReviewBookmarks/> */}
+        <Examination/>
         </ScrollView>
+        <SafeAreaView>
+        {/* <SwaSegmentedButton
+      /> */}
+        </SafeAreaView>
       
       </PaperProvider>
     </View>

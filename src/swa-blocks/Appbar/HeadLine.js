@@ -2,11 +2,11 @@ import React from "react";
 import SwaAppBar from "../../swa-components/Appbar/SwaAppbar";
 import { View, StyleSheet } from "react-native";
 import { Text } from "react-native-paper";
-function HeadLine() {
+function HeadLine({title}) {
   return (
     <View>
       <Text variant="titleSmall">Headline</Text>
-      <SwaAppBar backgroundColor="white" title="Common" titleStyle={styles.text} />
+      <SwaAppBar backgroundColor="white" title={title} titleStyle={styles.text} />
     </View>
   );
 }

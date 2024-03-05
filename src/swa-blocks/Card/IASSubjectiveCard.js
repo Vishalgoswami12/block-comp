@@ -45,23 +45,26 @@ function IASSubjectiveCard(){
             mode="outlined"
             backgroundColor="#B9DCFF"
             label="Syllabus"
-            />
+            >
+                Syllabus
+            </SwaButton>
              <SwaButton
             size="xsmall"
             mode="outlined"
             backgroundColor="#B9DCFF"
             label="Paper"
-            />
+            >
+                Paper
+            </SwaButton>
             </View>
             <View style={styles.upload}>
             <SwaButton
             size="xmedium"
             mode="outlined"
             backgroundColor="#008FFF"
-            label="Upload"
             labelColor="white"
             labelFontSize={16}
-            />
+            >Upload</SwaButton>
             </View>
           
             </SwaCard>     

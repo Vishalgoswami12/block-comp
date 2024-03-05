@@ -1,7 +1,7 @@
 import React from "react";
 import { Dialog, Paragraph } from "react-native-paper";
-import { AntDesign, Ionicons } from "@expo/vector-icons";
-import { View } from "react-native"; // Correct import statement
+import { AntDesign } from "@expo/vector-icons"; // Importing only AntDesign as Ionicons is not used
+import { View } from "react-native";
 
 const SwaDialog = ({
   visible,
@@ -27,7 +27,7 @@ const SwaDialog = ({
         {title}
       </Dialog.Title>
       <Dialog.Content style={contentStyle}>
-        {content.map((line, index) => (
+        {content && Array.isArray(content) && content.map((line, index) => (
           <React.Fragment key={index}>
             <Paragraph style={{ marginLeft: index === tickIndex ? 0 : 11.5 }}>
               {index === tickIndex && iconName && (
