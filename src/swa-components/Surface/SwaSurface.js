@@ -1,9 +1,10 @@
 import React from "react";
 import { Surface } from "react-native-paper";
 
-const SwaSurface = ({ children, style, elevation, mode, theme, testID }) => {
+const SwaSurface = ({ children, style, theme, ...props }) => {
+  //elevation, mode,  testID = ...props
   return (
-    <Surface style={style} elevation={elevation} mode={mode} theme={theme} testID={testID}>
+    <Surface style={style} theme={theme} {...props}>
       {children}
     </Surface>
   );

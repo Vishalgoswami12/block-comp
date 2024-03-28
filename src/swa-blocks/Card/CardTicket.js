@@ -1,56 +1,69 @@
 import React from "react";
-import SwaCard from "../../swa-components/Card/swaCard";
 import { View, StyleSheet } from "react-native";
 import SwaButton from "../../swa-components/Button/swaButton";
 import { Text } from "react-native-paper";
+import themeObject from "../../Constants/Globaltyle";
 
 function CardTicket() {
   return (
     <View style={styles.container}>
-     <SwaCard width={328}
-     height={76}
-     borderRadius={10}
-     title="Ticket : Video Stream glitch"
-     titleStyle={styles.title}
-     >
-      <View style={styles.buttonContainer}>
-      <SwaButton 
-        // backgroundColor="red"
-        size="xxsmall"
-        borderRadius={10}
-        labelFontSize={11}
-        labelColor="white"
-        >Open</SwaButton>
+      <View style={styles.cardContainer}>
+        <View style={styles.buttonContainer}>
+          <Text style={styles.title}>Ticket:Video Stream glitch</Text>
+          <SwaButton 
+            size="xxsmall"
+            theme={themeObject}
+            borderRadius={10}
+            labelFontSize={11}
+            labelColor="white"
+          >
+            Open
+          </SwaButton>
+        </View>
+        <View style={styles.textContainer}>
+          <Text style={styles.text}>24 Jan 2024, 11:06AM</Text>
+          <Text style={styles.text}>Ticket ID - 1234567</Text>
+        </View>
       </View>
-     <View style={styles.textcon}>
-      <Text style={styles.text}>24 Jan 2024, 11:06AM</Text>
-      <Text style={styles.text}>Ticket ID - 1234567</Text>
-     </View>
-     </SwaCard>
     </View>
   );
 }
-const styles = StyleSheet.create({
 
-  container: {
-    position: "relative"
+const styles = StyleSheet.create({
+  cardContainer: {
+    width: "100%",
+    borderRadius: 10,
+    padding: 10,
+    backgroundColor: "white",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   buttonContainer: {
-   position:"absolute",
-   right:2
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  title: {
+    fontSize: 14,
+    fontWeight: "bold",
+    color: "#000000",
+  },
+  textContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: 5,
   },
   text: {
-    color:"#727272",
-    fontSize:12
+    color: "#727272",
+    fontSize: 12,
   },
-  textcon:{
-    flexDirection:"row",
-    justifyContent:"space-between",
-    bottom:25
-  },
-  title:{
-    left:-15
-  }
 });
 
 export default CardTicket;

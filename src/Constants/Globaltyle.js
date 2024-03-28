@@ -41,4 +41,6 @@ const themeObject = {
       }
     }
   };
+
+  export default themeObject;
   

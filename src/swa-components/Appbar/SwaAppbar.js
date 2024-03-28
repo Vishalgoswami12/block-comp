@@ -8,7 +8,7 @@ const SwaAppBar = ({
   children,
   mode,
   title,
-  titleStyle, // Remove titleStyle from here
+  titleStyle, 
   subtitle,
   subtitleStyle,
   elevated = true,

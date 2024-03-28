@@ -1,47 +1,18 @@
 import React from "react";
 import { Chip } from "react-native-paper";
 
-const SwaChip = ({
-  mode,
-  children,
-  icon,
-  avatar,
-  closeIcon,
-  selected,
-  selectedColor,
-  showSelectedOverlay,
-  showSelectedCheck,
-  disabled,
-  background,
-  accessibilityLabel,
-  onPress,
-  elevated,
-  textStyle,
-  style,
-  theme,
-  testID,
-  onClose,
-}) => {
+const SwaChip = ({ children, theme, style, ...props }) => {
+  //mode,icon,avatar,closeIcon,selected,selectedColor,showSelectedCheck,disabled,onPress,elevated = ...props
   return (
     <Chip
-      mode={mode}
-      icon={icon}
-      avatar={avatar}
-      closeIcon={closeIcon}
-      selected={selected}
-      selectedColor={selectedColor}
-      showSelectedOverlay={showSelectedOverlay}
-      showSelectedCheck={showSelectedCheck}
-      disabled={disabled}
-      background={background}
-      accessibilityLabel={accessibilityLabel}
-      onPress={onPress}
-      elevated={elevated}
-      textStyle={textStyle}
+      {...props}
       style={style}
-      theme={theme}
-      testID={testID}
-      onClose={onClose}
+      background={theme?.swaTheme?.PrimaryColor?.Primary100 || "#0D80F2"}
+      style1={{
+        backgroundColor: theme?.swaTheme?.PrimaryColor?.Primary100 || "#0D80F2",
+      }}
+      textStyle={{ color: theme?.swaTheme?.ConstColor?.Const0 || "#FFFFFF" }}
+   
       >
       {children}
     </Chip>

@@ -13,9 +13,9 @@ return(
         </TouchableOpacity>
         </View>
        
-         <ScrollView horizontal={true} contentContainerStyle={styles.scrollView}>
+         <ScrollView horizontal={true} contentContainerStyle={styles.scrollViewvideo}>
       {[1, 2, 3, 4, 5].map((item, index) => (
-        <View key={index} style={[styles.cardContainer, index === 1 && styles.secondCardMargin]}>
+        <View key={index} style={[styles.cardContainervideo, index === 1 && styles.secondCardMarginvideo]}>
           <CardCourse />
         </View>
       ))}
@@ -30,14 +30,14 @@ const styles = StyleSheet.create({
         fontWeight:500,
         marginLeft:15
     },
-  scrollView: {
+  scrollViewvideo: {
     flexDirection: "row",
-    padding: 10,
+    paddingLeft:8
   },
-  cardContainer: {
+  cardContainervideo: {
     marginRight: 10, 
   },
-  secondCardMargin: {
+  secondCardMarginvideo: {
     marginLeft: 10,
   },
   textrow:{
@@ -46,8 +46,8 @@ const styles = StyleSheet.create({
   },
   seetext:{
     color:"#0D80F2",
-    top:25,
-    right:15
+    marginTop:25,
+    marginRight:15
   }
 });
 

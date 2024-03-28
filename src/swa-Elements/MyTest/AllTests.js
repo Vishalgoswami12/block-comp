@@ -1,88 +1,76 @@
-import react from "react";
-import { View,StyleSheet,ScrollView } from "react-native";
-import SwaAppBar from "../../swa-components/Appbar/SwaAppbar";
+import React, { useState } from "react";
+import { View, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
 import { Text } from "react-native-paper";
 import CardTest from "../../swa-blocks/Card/CardTest";
 import BottomNavigationBar from "../../swa-blocks/BoottomNavigation/BottomNavigationBar";
-function AllTest(){
-return(
+import CardAttempt from "../../swa-blocks/Card/CardAttempt";
+function AllTest() {
+  const [showAllTest, setShowAllTest] = useState(true); // State to track whether to show all tests or attempted tests
+
+  return (
     <View style={styles.container}>
-          <View style={styles.card}>
-        <SwaAppBar
-        backAction={true}
-        backgroundColor="white"
-        elevated={true}
-        style={styles.appBar}
-        />
-       
-        </View>
-        <Text style={styles.testtext}>Tests</Text>
-        <View style={styles.headline}>
-        <Text style={styles.head}>All Test</Text>
-        <Text style={styles.attempt}>Attempted</Text>
-        </View>
-      <ScrollView  contentContainerStyle={styles.scrollView}>
-      {[1, 2, 3, 4, ].map((item, index) => (
-             <View key={index} style={[styles.cardContainer, index === 1,2,3 && styles.secondCardMargin]}>
-                <CardTest/>
-                 </View>
-      ))}
-      </ScrollView>
-      <View>
-        <BottomNavigationBar/>
+      <View style={styles.headline}>
+        <TouchableOpacity onPress={() => setShowAllTest(true)}>
+          <Text style={[styles.head, showAllTest && styles.active]}>All Test</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => setShowAllTest(false)}>
+          <Text style={[styles.attempt, !showAllTest && styles.active]}>Attempted</Text>
+        </TouchableOpacity>
       </View>
+      <ScrollView contentContainerStyle={styles.scrollView}>
+        {showAllTest ? (
+          [1, 2, 3, 4].map((item, index) => (
+            <View key={index} style={[styles.cardContainer, index !== 0 && styles.secondCardMargin]}>
+              <CardTest />
+            </View>
+          ))
+        ) : (
+          <ScrollView  contentContainerStyle={styles.scrollView2}>
+          {[1, 2, 3, 4, ].map((item, index) => (
+                 <View key={index} style={[styles.cardContainer, index === 1,2,3 && styles.secondCardMargin]}>
+                    <CardAttempt/>
+                     </View>
+          ))}
+          </ScrollView>
+        )}
+      </ScrollView>
     </View>
-)
+  );
 }
+
 const styles = StyleSheet.create({
-    container:{
-        height:800
-    } ,
-    card:{
-        backgroundColor: "black", 
-        shadowColor: "black",
-        shadowOffset: {
-          width: 3,
-          height: 7,
-        },
-        shadowOpacity: 1,
-        // shadowRadius:7,
-        elevation: 11,
-        bottom:5
-    },
-    testtext:{
-        bottom:49,
-        left:50,
-        fontSize:16,
-        fontWeight:600
-    },
-    head:{
-        fontSize:16,
-        fontWeight:500,
-        left:50
-    },
-    attempt:{
-        fontSize:16,
-        fontWeight:500,
-        right:50
-    },
-    headline:{
-        flexDirection:"row",
-        justifyContent:"space-between"
-    },
-    scrollView: {
-        padding: 10,
-      },
-      cardContainer: {
-        marginRight: 10, 
-        
-      },
-      secondCardMargin: {
-        marginLeft: 5,
-        marginTop:10
-      },
-   
-   
-   
-})
+  head: {
+    fontSize: 16,
+    fontWeight: "500",
+    marginLeft: 50,
+  },
+  attempt: {
+    fontSize: 16,
+    fontWeight: "500",
+    marginRight: 70,
+  },
+  headline: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  scrollView: {
+    padding: 10,
+    marginTop: 40,
+  },
+  cardContainer: {
+    marginTop: 10,
+  },
+  secondCardMargin: {
+    marginLeft: 5,
+  },
+  active: {
+    color: "blue", // Change color for active tab
+  },
+  attemptedText: {
+    fontSize: 18,
+    textAlign: "center",
+    marginTop: 20,
+  },
+});
+
 export default AllTest;

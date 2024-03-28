@@ -6,16 +6,11 @@ import SwaIcon from "../../swa-components/Icon/SwaIcon";
 import { FontAwesome5 } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import SwaButton from "../../swa-components/Button/swaButton";
-
+import themeObject from "../../Constants/Globaltyle";
 function ExamCard(){
 return(
     <View style={styles.card}>
-            <SwaCard
-            width={325}
-            height={138}
-            borderRadius={4}
-            backgroundColor="#B9DCFF"
-            >
+            <View style={{borderRadius:10, backgroundColor:"#B9DCFF",padding:10}}>
                 <Image/>
                 <Text style={styles.text}>Class XII CBSE Board Examination  </Text>
                 <View style={styles.size}>
@@ -31,43 +26,43 @@ return(
                 <View style={styles.btn}>
                 <SwaButton
                 size="xxmedium"
-                label="View Exams"
-                labelColor="white"
+                borderRadius={10}
                 labelFontSize={18}
-
-                />
+                mode={"contained"}
+                theme={themeObject}
+                >
+                    View Exams
+                </SwaButton>
                 </View>
                
-            </SwaCard>
+            </View>
     </View>
 )
 }
 
 const styles = StyleSheet.create({
 card:{
-    height:140,
     width:328,
     borderWidth:1,
     borderColor:"#5AB0FF",
-    marginLeft:5
+    marginLeft:5,
+    borderRadius:10
 },
 text:{
     fontSize:16,
     fontWeight:700,
-    bottom:55,
-    left:50
+    marginLeft:50
 },
 examcol:{
     color:"grey"
 },
 size:{
     flexDirection:'row',
-    bottom:45,
-    left:55,
-    justifyContent:"space-between"
+    marginLeft:50,
+    marginTop:8,
+    gap:40
 },
 student:{
-    right:60,
     flexDirection:"row",
 },
 foexam:{
@@ -79,9 +74,8 @@ icon:{
 
 },
 btn:{
-    position:"absolute",
-    top:80,
-    left:16
+   marginTop:20,
+   alignSelf:"center"
 }
 })
 

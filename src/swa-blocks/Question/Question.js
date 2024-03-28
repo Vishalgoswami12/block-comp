@@ -40,7 +40,8 @@ function Question() {
 const styles = StyleSheet.create({
   subconatiner: {
     flexDirection: "row",
-    justifyContent: "space-between"
+    justifyContent: "space-between",
+    // height:900
   },
   iconContainer: {
     flexDirection: "row",

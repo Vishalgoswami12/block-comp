@@ -3,9 +3,9 @@ import { StyleSheet, View } from "react-native";
 import { Feather, Foundation, AntDesign, FontAwesome5 } from "@expo/vector-icons";
 import { Text } from "react-native-paper";
 
-const BottomNavigationBar = () => {
+const BottomNavigationBar = ({ backgroundColor }) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: backgroundColor || "white" }]}>
       <View>
         <Feather name="home" size={24} color="black" />
         <Text variant="titleSmall" style={styles.text}>
@@ -40,12 +40,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     // marginBottom: 10,
-    backgroundColor: "white",
     width: 360,
     height: 100,
     justifyContent: "space-between",
     padding: 20,
-    left:20
+    left: 20
   },
   text: {
     textAlign: "center",

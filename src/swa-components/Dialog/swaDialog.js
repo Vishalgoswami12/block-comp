@@ -1,6 +1,6 @@
 import React from "react";
 import { Dialog, Paragraph } from "react-native-paper";
-import { AntDesign } from "@expo/vector-icons"; // Importing only AntDesign as Ionicons is not used
+import { AntDesign } from "@expo/vector-icons"; 
 import { View } from "react-native";
 
 const SwaDialog = ({

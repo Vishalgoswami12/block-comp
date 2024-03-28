@@ -4,64 +4,57 @@ import { Card } from "react-native-paper";
 
 const SwaCard = ({
   title,
-  titleStyle,
   actions,
-  actionStyle,
-  testId,
+  testID,
   leftIcon,
-  content, // Add content to destructuring assignment
-  contentStyle,
+  content,
   titleNumberOfLines,
   titleVariant,
   subtitle,
-  subtitleStyle,
   onPress,
   coverImage,
-  coverImageTheme,
-  coverImageStyle,
-  style,
-  width,
-  height,
+  style = {},
+  children,
+  theme,
   backgroundColor,
-  padding,
-  borderRadius,
-  children
+  titleStyle,
 }) => {
   return (
     <Card
       style={{
-        width: width,
-        height: height,
-        backgroundColor: backgroundColor || "white",
-        padding: padding || 10,
-        borderRadius: borderRadius
+        width: style?.width,
+        height: style?.height,
+        backgroundColor: backgroundColor || theme?.swaTheme?.PrimaryColor?.Primary50 || "#E2F1FF",
+        padding: 0, 
+        margin: 0, 
+        borderRadius: style?.borderRadius
       }}>
       {coverImage && (
         <Card.Cover
           source={coverImage}
-          style={coverImageStyle}
-          theme={coverImageTheme}
-          testId={testId}
+          style={style?.coverImageStyle}
+          theme={theme?.swaTheme?.PrimaryColor?.Primary100 || "#0D80F2"}
+          testId={testID}
           onPress={onPress}
         />
       )}
       <Card.Title
         title={title}
-        titleStyle={titleStyle}
+        titleStyle={[style?.titleStyle, titleStyle]}
         titleNumberOfLines={titleNumberOfLines}
         titleVariant={titleVariant}
         subtitle={subtitle}
-        subtitleStyle={subtitleStyle}
-        testId={testId}
+        subtitleStyle={style?.subtitleStyle}
+        testId={testID}
         leftIcon={leftIcon}
         onPress={onPress}
         style={style}
       />
-      <Card.Content style={contentStyle} onPress={onPress} testId={testId}>
+      <Card.Content style={style?.contentStyle} onPress={onPress} testId={testID}>
         <Text>{content}</Text>
       </Card.Content>
       {actions && (
-        <Card.Actions style={actionStyle} testId={testId}>
+        <Card.Actions style={style?.actionStyle} testId={testID}>
           <View>{actions}</View>
         </Card.Actions>
       )}

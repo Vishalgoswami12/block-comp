@@ -1,43 +1,13 @@
 import React from "react";
 import { List } from "react-native-paper";
 
-const SwaListAccordian = ({
-  title,
-  description,
-  left,
-  right,
-  children,
-  expanded,
-  onPress,
-  theme,
-  background,
-  style,
-  titleStyle,
-  descriptionStyle,
-  titleNumberOfLines,
-  descriptionNumberOfLines,
-  titleMaxFontSizeMultiplier,
-  descriptionMaxFontSizeMultiplier,
-  testID
-}) => {
+const SwaListAccordian = ({ children, theme, style, ...props }) => {
+  //title,description,left,right,expanded,onPress,background, titleNumberOfLines,descriptionNumberOfLines,titleMaxFontSizeMultiplier,descriptionMaxFontSizeMultiplier,testID = ...props
   return (
     <List.Accordion
-      title={title}
-      description={description}
-      left={left}
-      right={right}
-      expanded={expanded}
-      onPress={onPress}
+      {...props}
       theme={theme}
-      background={background}
-      style={style}
-      titleStyle={titleStyle}
-      descriptionStyle={descriptionStyle}
-      titleNumberOfLines={titleNumberOfLines}
-      descriptionNumberOfLines={descriptionNumberOfLines}
-      titleMaxFontSizeMultiplier={titleMaxFontSizeMultiplier}
-      descriptionMaxFontSizeMultiplier={descriptionMaxFontSizeMultiplier}
-      testID={testID}>
+      style={style}>
       {children}
     </List.Accordion>
   );

@@ -633,11 +633,10 @@ export default styles = {
       },
       IAS_MCQ_TEST:{
         container: {
-          width: 163,
-          height: 244,
           borderWidth: 1,
           borderColor: "#5AB0FF",
-          marginLeft: 5
+          marginLeft: 5,
+          borderRadius:10
         },
         title: {
           textAlign: "center",
@@ -648,7 +647,6 @@ export default styles = {
         },
         ser: {
           textAlign: "center",
-          bottom: 30,
           fontSize: 14,
           fontWeight: 500
         },
@@ -657,26 +655,27 @@ export default styles = {
         },
         resize: {
           flexDirection: "row",
-          bottom: 25,
-          left: 40
+          marginLeft: 40
         },
         line: {
           borderBottomColor: "grey",
           borderBottomWidth: 1,
           marginVertical: 10,
-          bottom: 28
+          width:"70%",
+          textAlign:"center",
+          marginLeft:19
         },
         ques: {
           fontSize: 12,
-          left: 8
+          marginLeft: 8
         },
         iconText: {
           flexDirection: "row",
-          bottom: 30,
-          left: 20
+          marginLeft: 20
         },
         btn: {
-          bottom: 20
+          marginTop:15,
+          alignItems:"center"
         }
       },
       IAS_SUBJECTIVE:{
@@ -764,21 +763,37 @@ export default styles = {
       SCORE:{
         bar:{
             position: 'absolute', 
-            top: 10, 
+            top: -15, 
             left: 27,
         },
         score:{
             position:"absolute",
             left:60,
-            top:45
+            top:22
+        },
+        scorecontainer:{
+          bottom:80
+        },
+        graph:{
+          width:328,
+          height:168,
+          backgroundColor:"#0D80F2",
+          borderRadius:10,
+          left:20,
+          top:40
+        },
+      
+        answers:{
+            marginTop:250,
+            left:18
         },
         text:{
             color:"#193DAD"
         },
         time:{
             position:"absolute",
-            right:45,
-            top:42
+            right:59,
+            top:-50
         },
         sub:{
             width:100,
@@ -788,8 +803,8 @@ export default styles = {
             borderColor:"#BBBBBB",
             borderRadius:10,
             position:"absolute",
-            top:160,
-            left:10
+            top:230,
+            left:20
         },
         subCol:{
             fontSize:14,
@@ -809,8 +824,8 @@ export default styles = {
             borderColor:"#BBBBBB",
             borderRadius:10,
             position:"absolute",
-            top:160,
-            left:120
+            top:230,
+            left:133
         },
         subChem:{
             width:100,
@@ -820,8 +835,8 @@ export default styles = {
             borderColor:"#BBBBBB",
             borderRadius:10,
             position:"absolute",
-            left:230,
-            top:160
+            left:250,
+            top:230
         },
         ques:{
             top:10,
@@ -832,11 +847,11 @@ export default styles = {
         },
         unans:{
             position:"absolute",
-            bottom:140,
+            bottom:100,
             left:200
         },
         ans:{
-            bottom:140
+            bottom:100
         }
         },
       SYLLABUS_ATTEMPT:{

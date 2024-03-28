@@ -13,9 +13,6 @@ return(
 )
 }
 const styles = StyleSheet.create({
-    container:{
-        height:1130,
-    },
     
 })
 export default Goal;

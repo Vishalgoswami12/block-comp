@@ -1,70 +1,57 @@
 import React from "react";
-import { Card, Text, View } from "react-native-paper";
-import SwaCard from "../../swa-components/Card/SwaCard";
-import SwaBadge from "../../swa-components/Badge/SwaBadge";
-import SwaIcon from "../../swa-components/Icon/SwaIcon";
+import { View } from "react-native";
+import SwaCard from "../../swa-components/Card/swaCard";
+import { Text } from "react-native-paper";
+import { MaterialIcons,FontAwesome6,MaterialCommunityIcons } from '@expo/vector-icons';
+
 
 function CardCourseAnalytic() {
   return (
-    <Card>
-      {/* First SwaCard */}
-      <SwaCard
-        title="Title 1"
-        subtitle="Quis autem vel eum iure rephrehendrit qui in ea voluplate velit esse qunam nihil molestiae consequatu"
-        titleVariant="titleMedium"
-      />
+   <View>
+    <View style={{width:"100%",borderRadius:10, padding:10}}
+    backgroundColor="white">
+      <View>
+        <Text style={{width:250,}} variant="titleSmall">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatu</Text>
+       <View style={{flexDirection:"row", marginTop:8}}>
+       <Text variant="labelSmall">Solving JEE Past Year Questions</Text>
+       <View style={{flexDirection:"row",marginLeft:8}}>
+       <MaterialIcons name="circle" size={16} color="#B9DCFF" />
+       <Text style={{marginLeft:4}} variant="labelSmall">Video Lecture</Text>
+       </View>
+       </View>
+       <View style={{marginTop:10, flexDirection:"row", justifyContent:"space-between"}}>
+       <View style={{flexDirection:"row"}}>
+      <FontAwesome6 style={{marginTop:7}} name="clock" size={16} color="black" />
+      <View style={{marginLeft:10}}>
+        <Text variant="labelMedium">9:23PM</Text>
+        <Text variant="labelSmall">Started</Text>
+      </View>
+      </View>
+      <View style={{flexDirection:"row"}}>
+      <FontAwesome6 style={{marginTop:7}} name="clock" size={16} color="black" />
+      <View style={{marginLeft:10}}>
+        <Text variant="labelMedium">10:54PM</Text>
+        <Text variant="labelSmall">Completed</Text>
+      </View>
+      </View>
+       </View>
+     <View style={{flexDirection:"row",justifyContent:"space-between"}}>
+     <View style={{flexDirection:"row"}}>
+     <MaterialCommunityIcons  style={{marginTop:7, marginLeft:-4}} name="cookie-outline" size={24} color="black" />
+      <View style={{marginTop:5, marginLeft:3}}>
+        <Text variant="labelMedium">10:54PM</Text>
+        <Text variant="labelSmall">Completed</Text>
+      </View>
+      </View>
+      <View style={{flexDirection:"row", marginTop:10}}>
+      <FontAwesome6 name="fire" size={18} color="#FF7100" />
+      <Text style={{color:"#FF7100", marginLeft:5}} variant="labelMedium">Peak Productivity</Text>
+      </View>
+     </View>
+      </View>
+    </View>
 
-      {/* Second SwaCard */}
-      <SwaCard
-        title="Solving Jee Past Year Question"
-        titleVariant="titleSmall"
-        content={
-          <View>
-            <SwaBadge />
-            <SwaCard title="Video Lecture" titleVariant="titleSmall" />
-          </View>
-        }
-      />
-
-      {/* Third SwaCard */}
-      <SwaCard
-        content={
-          <View>
-            <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <SwaIcon source="duration" />
-              <Card.Content>
-                <Text variant="labelSmall">9:23 PM</Text>
-                <Text>Started</Text>
-              </Card.Content>
-            </View>
-            <View style={{ flexDirection: "row", alignItems: "center" }}>
-              <SwaIcon source="duration" />
-              <Card.Content>
-                <Text variant="labelSmall">10:54 PM</Text>
-                <Text variant="titleSmall">Completed</Text>
-              </Card.Content>
-            </View>
-          </View>
-        }
-      />
-
-      {/* Fourth SwaCard */}
-      <SwaCard
-        content={
-          <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-            <View style={{ alignItems: "center" }}>
-              <SwaIcon source="support" />
-              <Text variant="titleMedium">0</Text>
-              <Text variant="titleSmall">Breaks</Text>
-            </View>
-            <View style={{ alignItems: "center" }}>
-              <SwaIcon source="analytic" />
-              <Text variant="titleMedium">Peak Productivity</Text>
-            </View>
-          </View>
-        }
-      />
-    </Card>
+   </View>
   );
 }
 

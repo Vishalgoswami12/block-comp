@@ -7,12 +7,14 @@ function Testimonials(){
 return(
     <View>
           <Text style={styles.text}>Testimonials</Text>
-          <ScrollView horizontal={true} contentContainerStyle={styles.scrollView}>
-          {[1, 2, 3, 4, 5].map((item, index) => (
-             <View key={index} style={[styles.cardContainer, index === 1 && styles.secondCardMargin]}>
-                <CardTestimonial/>
-                           </View>
-      ))}
+          <ScrollView horizontal={true} style={styles.scrollView}>
+          <View style={{flexDirection:"row",gap:10}}>
+        {[1, 2,3,4].map((item, index) => (
+          <View key={index} style={styles.cardContainer}>
+            <CardTestimonial />
+          </View>
+        ))}
+        </View>
         </ScrollView>
     </View>
 )

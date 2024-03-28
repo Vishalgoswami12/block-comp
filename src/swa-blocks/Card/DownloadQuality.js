@@ -1,5 +1,5 @@
 import React from "react";
-import SwaDialog from "../../swa-components/Dialog/SwaDialog";
+import SwaDialog from "../../swa-components/Dialog/swaDialog";
 import { Text } from "react-native-paper";
 import { View, StyleSheet } from "react-native";
 

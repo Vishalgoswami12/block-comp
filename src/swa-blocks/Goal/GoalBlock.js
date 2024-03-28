@@ -1,24 +1,13 @@
 import React from "react"
 import { View,StyleSheet } from "react-native";
-import SwaAppBar from "../../swa-components/Appbar/SwaAppbar";
-import { Appbar, Chip, Text } from "react-native-paper";
+import {  Text } from "react-native-paper";
 import SwaChip from "../../swa-components/Chip/swaChip";
-import { MaterialIcons } from '@expo/vector-icons';
 import SwaRadioButton from "../../swa-components/RadioButton/swaRadioButton";
 import SwaListAccordian from "../../swa-components/List/swaListAccordian";
 import SwaButton from "../../swa-components/Button/swaButton";
-import BottomNavigationBar from "../../swa-blocks/BoottomNavigation/BottomNavigationBar";
 function GoalBlock({theme}){
 return(
     <View>
-        <View style={styles.card}>
-        <SwaAppBar
-        backAction={true}
-        elevated={true}
-        style={styles.appBar}
-        theme={theme}
-        />
-        </View>
         <Text style={styles.textgoal}>Fix Your Goal</Text>
         <View style={styles.chipcard}>
             <SwaChip
@@ -146,9 +135,6 @@ return(
         borderRadius={10}
         >Continue</SwaButton>
         </View>
-      <View style={styles.bottamnav}>
-        <BottomNavigationBar/>
-      </View>
     </View>
 )
 }
@@ -193,6 +179,7 @@ const styles = StyleSheet.create({
         left:10,
         flexDirection:"row",
         flexWrap: 'wrap',
+        gap:10,
         top:50
     },
     title:{

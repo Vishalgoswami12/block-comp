@@ -5,12 +5,12 @@ import CardCourse from "../../swa-blocks/Card/CardCourse";
 
 function PopularVideoCourses() {
   return (
-    <View>
+    <View style={{}}>
          <Text style={styles.text}>Popular Video Courses</Text>
-         <ScrollView horizontal={true} contentContainerStyle={styles.scrollView}>
+         <ScrollView horizontal={true} contentContainerStyle={styles.scrollViewpopular}>
       {[1, 2, 3, 4, 5].map((item, index) => (
-        <View key={index} style={[styles.cardContainer, index === 1 && styles.secondCardMargin]}>
-          <CardCourse style={styles.card} />
+        <View key={index} style={[styles.cardContainerpopular, index === 1 && styles.secondCardMarginpopular]}>
+          <CardCourse style={styles.cardpopular} />
         </View>
       ))}
     </ScrollView>
@@ -21,21 +21,20 @@ function PopularVideoCourses() {
 const styles = StyleSheet.create({
     text:{
         fontSize:24,
-        marginTop:20,
         fontWeight:500,
         marginLeft:15
     },
-  scrollView: {
+  scrollViewpopular: {
     flexDirection: "row",
-    padding: 10,
+    paddingLeft:8
   },
-  cardContainer: {
+  cardContainerpopular: {
     marginRight: 10, 
   },
-  secondCardMargin: {
+  secondCardMarginpopular: {
     marginLeft: 10,
   },
-  card:{
+  cardpopular:{
     marginLeft:20
   }
 });
